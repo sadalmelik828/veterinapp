@@ -5,7 +5,12 @@ import {
   Link,
   Switch
 } from 'react-router-dom'
-import Signup from './Signup'
+import Historia from './pages/historia/Historia'
+import Laboratorio from './pages/laboratorio/Laboratorio'
+import Pacientes from './pages/pacientes/Pacientes'
+import Turnos from './pages/turnos/Turnos'
+import Login from './pages/usuarios/Login'
+import Signup from './pages/usuarios/Signup'
 import 'pure-css'
 import './Header.css'
 
@@ -74,13 +79,16 @@ class Header extends Component {
                 <div className="pure-menu pure-menu-horizontal custom-can-transform">
                   <ul className="pure-menu-list">
                     <li className="pure-menu-item">
-                      <Link to="/" className="pure-menu-link" onClick={this.closeMenu}>Home</Link>
+                      <Link to="/" className="pure-menu-link" onClick={this.closeMenu}>Turnos</Link>
                     </li>
                     <li className="pure-menu-item">
-                      <Link to="/about" className="pure-menu-link" onClick={this.closeMenu}>About</Link>
+                      <Link to="/historia" className="pure-menu-link" onClick={this.closeMenu}>Historia</Link>
                     </li>
                     <li className="pure-menu-item">
-                      <Link to="/contact" className="pure-menu-link" onClick={this.closeMenu}>Contact</Link>
+                      <Link to="/laboratorio" className="pure-menu-link" onClick={this.closeMenu}>Laboratorio</Link>
+                    </li>
+                    <li className="pure-menu-item">
+                      <Link to="/pacientes" className="pure-menu-link" onClick={this.closeMenu}>Pacientes</Link>
                     </li>
                   </ul>
                 </div>
@@ -101,10 +109,11 @@ class Header extends Component {
           </header>
           <main className="main">
             <Switch>
-              <Route path="/" exact component={Signup} />
-              <Route path="/about" component={Signup} />
-              <Route path="/contact" component={Signup} />
-              <Route path="/login" component={Signup} />
+              <Route path="/" exact component={Turnos} />
+              <Route path="/historia" component={Historia} />
+              <Route path="/laboratorio" component={Laboratorio} />
+              <Route path="/pacientes" component={Pacientes} />
+              <Route path="/login" component={Login} />
               <Route path="/signup" component={Signup} />
             </Switch>
           </main>

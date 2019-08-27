@@ -11,6 +11,7 @@ import Pacientes from './pages/pacientes/Pacientes'
 import Turnos from './pages/turnos/Turnos'
 import Login from './pages/usuarios/Login'
 import Signup from './pages/usuarios/Signup'
+import Error404 from './pages/Error404'
 import 'pure-css'
 import './Header.css'
 
@@ -100,7 +101,7 @@ class Header extends Component {
                       <Link to="/login" className="pure-menu-link" onClick={this.closeMenu}>Login</Link>
                     </li>
                     <li className="pure-menu-item">
-                      <Link to="/signup" className="pure-menu-link" onClick={this.onClick}>SignUp</Link>
+                      <Link to="/signup" className="pure-menu-link" onClick={this.closeMenu}>SignUp</Link>
                     </li>
                   </ul>
                 </div>
@@ -115,6 +116,7 @@ class Header extends Component {
               <Route path="/pacientes" component={Pacientes} />
               <Route path="/login" component={Login} />
               <Route path="/signup" component={Signup} />
+              <Route component={Error404} />
             </Switch>
           </main>
         </div>

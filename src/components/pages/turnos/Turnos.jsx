@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Form from './FormContainer'
 
 class Turnos extends Component {
   constructor (...props) {
@@ -10,6 +11,7 @@ class Turnos extends Component {
     return (
       <div>
         <h2>Turnos</h2>
+        <Form />
       </div>
     )
   }
